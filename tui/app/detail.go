@@ -42,7 +42,7 @@ func (m DetailModel) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 			return m, func() tea.Msg { return navigateToHubMsg{} }
 		case "o":
 			return m, tea.ExecProcess(
-				buildCmd("claude"),
+				buildCmdInDir(m.w.Path, "claude"),
 				func(err error) tea.Msg { return nil },
 			)
 		case "s":
