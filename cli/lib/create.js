@@ -134,6 +134,7 @@ async function scaffoldWiki({ name, domain, goal, sources, topics, language, wik
 
   // wiki/ stubs
   const wikiTmplDir = path.join(TEMPLATE_DIR, 'wiki');
+  await fs.ensureDir(path.join(wikiPath, 'wiki'));
   for (const file of ['index.md', 'log.md', 'overview.md']) {
     const src = await fs.readFile(path.join(wikiTmplDir, file), 'utf8');
     const rendered = Handlebars.compile(src)({ name, domain, created: today });
