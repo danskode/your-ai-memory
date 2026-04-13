@@ -1,0 +1,35 @@
+{
+  "name": "your-ai-memory",
+  "version": "0.1.0",
+  "description": "Scaffold and manage domain-focused LLM wikis with Claude Code",
+  "type": "module",
+  "bin": {
+    "your-ai-memory": "./bin/your-ai-memory.js"
+  },
+  "files": [
+    "bin/",
+    "lib/",
+    "templates/"
+  ],
+  "scripts": {
+    "start": "node bin/your-ai-memory.js"
+  },
+  "dependencies": {
+    "chalk": "^5.3.0",
+    "fs-extra": "^11.2.0",
+    "handlebars": "^4.7.8",
+    "inquirer": "^9.2.23"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "claude",
+    "claude-code",
+    "wiki",
+    "knowledge-base",
+    "llm",
+    "ai-memory"
+  ],
+  "license": "MIT"
+}
