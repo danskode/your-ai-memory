@@ -74,11 +74,9 @@ func (m SourcesModel) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 				m.urlIn.Focus()
 				return m, textinput.Blink
 			case "m":
-				if sel, ok := m.list.SelectedItem().(sourceItem); ok {
+				if _, ok := m.list.SelectedItem().(sourceItem); ok {
 					return m, func() tea.Msg {
 						return navigateToDetailMsg{wiki: m.w}
-						// caller will trigger ingest on the selected file
-						_ = sel
 					}
 				}
 			}
