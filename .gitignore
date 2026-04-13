@@ -1,6 +1,5 @@
 # Node
 cli/node_modules/
-cli/package-lock.json
 
 # Go build artifacts
 tui/your-ai-memory-hub
